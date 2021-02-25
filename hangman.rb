@@ -163,9 +163,11 @@ module GameModule
   # Displays the number of guesses the player has left.
   def remaining_guesses()
     if $turns > 1
-      puts "You have #{$turns} guesses left!"
+      puts "You have #{$turns} incorrect guesses left!"
+    elsif $turns == 1
+      puts "You have 1 incorrect guess left!"
     else
-      puts "you have #{$turns} guess left!"
+      puts "GAME OVER"
     end
   end    
 
